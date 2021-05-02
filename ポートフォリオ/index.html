@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akumq's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <section id="fade"></section>
+    <section id="top">
+        <div class="top-text">
+            <h1>akumq's Portfolio</h1>
+            <p>Web creater</p>
+        </div>
+    </section>
+    <section id="intro">
+        <div>
+            <h1 data-triggaer="data-trigger">Introduction</h1>
+            <img class="icon" src="simakaze.png" width="256" height="256" alt="アイコン">
+            <h1 class="name" data-triggaer="data-trigger">akumq/あくま</h1>
+            <p class="birth" data-triggaer="data-trigger">2002 6/19生まれ</p>
+            <p class="setumei" data-triggaer="data-trigger"> iput2期生。Web制作勉強中</p>
+        </div>
+    </section>
+    <section id="work">
+        <div>
+            <h1 data-triggaer="data-trigger">Works</h1>
+            <p data-triggaer="data-trigger">随時追加予定</p>
+        </div>
+    </section>
+    <section id="footer">
+        <p>&copy; 2021 akumq / Desighned by akumq</p>
+    </section>
+    <script>
+        $(window).on("load", function () {
+                $("#fade").fadeOut(800);
+                $(".top-text").addClass("top-animation");
+        });
+        
+        const trigger = new ScrollTrigger.default({
+            once: true,
+            offset: {
+                element: {
+                    x: 0,
+                    y: (trigger, rect, direction) => {
+                        return 0.6;
+                    },
+                },
+                viewport: {
+                    x: 0,
+                    y: (trigger, frame, direction) => {
+                        return trigger.visible ? 0 : 0.6;
+                    },
+                },
+            },
+        });
+        trigger.add("[data-trigger]");
+        
+    </script>
+</body>
+
+</html>

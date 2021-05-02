@@ -1,0 +1,79 @@
+body {
+    background: rgb(48,48,48);
+    background: linear-gradient(90deg, rgba(48,48,48,1) 0%, rgba(133,133,133,1) 30%, rgba(133,133,133,1) 70%, rgba(48,48,48,1) 100%);
+    margin: 0;
+}
+#fade {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+    background-color: rgb(0, 0, 0);
+}
+#top {
+    display: flex;
+    white-space: nowrap;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.top-text p {
+    font-size: 2em;
+}
+.top-text h1 {
+    font-size: 4em;
+}
+.top-text {
+    visibility: hidden;
+    transform: translateY(50px);
+}
+#intro {
+    height: 100vh;
+    text-align: center;
+}
+#intro h1 {
+    font-size: 4em;
+}
+.icon{
+    border-radius: 50%;
+}
+#intro p {
+    font-size: 1.5em;
+}
+.birth {
+    margin-top: -3%;
+}
+#work {
+    text-align: center;
+}
+#work h1{
+    font-size: 4em;
+}
+#work p{
+    font-size: 1.5em;
+}
+#footer {
+    padding-top: 20%;
+    text-align: center;
+}
+.top-animation {
+	visibility: visible;
+	transition: 1s;
+	transform: translateY(0);
+}
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.visible, .invisible {
+    opacity: 0.0;
+    transform: translateY(25px);
+    transition: 1s;
+}
+
+.visible {
+    opacity: 1.0;
+    transform: translateY(0);
+}
